@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add viewport meta tag for responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOOSUBBYUN INFOA1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Add a Skip to Content link for keyboard navigation -->
-    <a href="#home" class="skip-link">Skip to content</a>
-
-    <header>
+    <header role="banner">
         <nav>
-            <h1><a href="#home">WooSub</a></h1>
-            <ul>
-                <li><a href="#home" aria-label="Home">Home</a></li>
-                <li><a href="#about" aria-label="About">About</a></li>
-                <li><a href="#projects" aria-label="Projects">Projects</a></li>
-                <li><a href="#contact" aria-label="Contact">Contact</a></li>
-            </ul>
+            <div class="logo">
+                <a href="#home">WooSub</a>
+            </div>
+            <div class="menu">
+                <ul role="navigation">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     
-    <section id="home">
+    
+    <section id="home" role="region" aria-label="Home">
         <div class="banner">
             <h1>WooSub Byun</h1>
             <p>IT Innovation and Design (ITID)</p>
@@ -31,64 +32,62 @@
         </div>
     </section>
 
-    <section id="about" class="section-dark">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a 22-year-old South Korean studying Information Technology and International Development (ITID) at Conestoga College. My passion lies in leveraging technology to address global development challenges and create positive change in the world.</p>
+<section id="about" class="section-dark" role="region" aria-label="About Me">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am a 22-year-old South Korean studying Information Technology and International Development (ITID) at Conestoga College. My passion lies in leveraging technology to address global development challenges and create positive change in the world.</p>
 
-            <p>With a strong foundation in IT and a deep understanding of international development issues, I am dedicated to making a meaningful impact on society. I have a keen interest in web development, programming, and database management, and I'm continuously expanding my skills to contribute to innovative solutions.</p>
+        <p>With a strong foundation in IT and a deep understanding of international development issues, I am dedicated to making a meaningful impact on society. I have a keen interest in web development, programming, and database management, and I'm continuously expanding my skills to contribute to innovative solutions.</p>
 
-            <p>When I'm not coding or working on projects, I enjoy exploring new cultures, cuisines, and languages. I believe that embracing diversity and understanding different perspectives is essential for creating solutions that truly benefit all communities.</p>
-        </div>
-    </section>
+        <p>When I'm not coding or working on projects, I enjoy exploring new cultures, cuisines, and languages. I believe that embracing diversity and understanding different perspectives is essential for creating solutions that truly benefit all communities.</p>
+    </div>
+</section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/3949101/pexels-photo-3949101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="HTML Project">
-                </div>
-                <div class="project-info">
-                    <h3>HTML Project</h3>
-                    <p>This project showcases my HTML skills. It includes a responsive webpage built using HTML and CSS, demonstrating the use of semantic tags and responsive design principles.</p>
-                </div>
+<section id="projects" role="region" aria-label="Projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <div class="project-image">
+                <img src="https://images.pexels.com/photos/3949101/pexels-photo-3949101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="HTML Project">
             </div>
-            <div class="project">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Java Project">
-                </div>
-                <div class "project-info">
-                    <h3>Java Project</h3>
-                    <p>This Java project showcases my programming skills. It's a console-based application that demonstrates various Java concepts, including object-oriented programming and data structures.</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/5588490/pexels-photo-5588490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="SQL Project">
-                </div>
-                <div class="project-info">
-                    <h3>SQL Project</h3>
-                    <p>This SQL project focuses on database management and querying. I designed and implemented a relational database system using SQL, created complex queries, and ensured data integrity.</p>
-                </div>
+            <div class="project-info">
+                <h3>HTML Project</h3>
+                <p>This project showcases my HTML skills. It includes a responsive webpage built using HTML and CSS, demonstrating the use of semantic tags and responsive design principles.</p>
             </div>
         </div>
-    </section>
-
-    <section id="contact" class="section-dark">
-        <div class="container">
-            <h2>Contact Me:</h2>
-            <p>Email: woosub.byun@gmail.com</p>
-            <p>Phone: 226-507-9928</p>
+        <div class="project">
+            <div class="project-image">
+                <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Java Project">
+            </div>
+            <div class="project-info">
+                <h3>Java Project</h3>
+                <p>This Java project showcases my programming skills. It's a console-based application that demonstrates various Java concepts, including object-oriented programming and data structures.</p>
+            </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 woosub Byun</p>
+        <div class="project">
+            <div class="project-image">
+                <img src="https://images.pexels.com/photos/5588490/pexels-photo-5588490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="SQL Project">
+            </div>
+            <div class="project-info">
+                <h3>SQL Project</h3>
+                <p>This SQL project focuses on database management and querying. I designed and implemented a relational database system using SQL, created complex queries, and ensured data integrity.</p>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Add any additional JavaScript or scripts if needed -->
+<section id="contact" class="section-dark" role="region" aria-label="Contact Me">
+    <div class="container">
+        <h2>Contact Me:</h2>
+        <p>Email: <a href="mailto:woosub.byun@gmail.com">woosub.byun@gmail.com</a></p>
+        <p>Phone: <a href="tel:226-507-9928">226-507-9928</a></p>
+    </div>
+</section>
+
+<footer role="contentinfo">
+    <div class="container">
+        <p>&copy; 2023 woosub Byun</p>
+    </div>
+</footer>
 </body>
 </html>
