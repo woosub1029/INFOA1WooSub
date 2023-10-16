@@ -105,8 +105,27 @@ nav {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff; 
+    color: #333; 
     text-align: center;
     padding: 20px 0;
+}
+#contact a {
+    color: #fff; /* Change text color to white */
+    text-decoration: none;
+}
+:focus {
+    outline: 2px solid #007BFF; /* Adjust the color and style as needed */
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .project-info {
+        padding: 10px;
+    }
+
+    /* Ensure text resizes properly */
+    .banner h1 {
+        font-size: 36px;
+    }
 }
