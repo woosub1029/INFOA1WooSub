@@ -1,93 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WOOSUBBYUN INFOA1</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness App Dashboard</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --accent-color: #e74c3c;
+      --text-color: #333;
+      --background-color: #f4f4f4;
+      --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      margin-right: 10px;
+    }
+
+    nav {
+      background-color: var(--secondary-color);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    #dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .widget {
+      background-color: #ffffff;
+      box-shadow: var(--box-shadow);
+      border-radius: 10px;
+      margin: 10px;
+      padding: 20px;
+      width: 300px;
+    }
+
+    .widget h2 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .button {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #217dbb;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .radio-label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+    }
+
+    .radio-label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    input[type="radio"]:checked + .radio-label:before {
+      background-color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .widget.card {
+      background-color: #ffeead;
+      color: #333;
+      box-shadow: var(--box-shadow);
+      border-radius: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+ 
+  </style>
 </head>
+
 <body>
-    <header role="banner">
-        <nav>
-            <div class="logo">
-                <a href="#home">WooSub</a>
-            </div>
-            <div class="menu">
-                <ul role="navigation">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
-    
-    <section id="home" role="region" aria-label="Home">
-        <div class="banner">
-            <h1>WooSub Byun</h1>
-            <p>IT Innovation and Design (ITID)</p>
-            <p>Country: South Korea</p>
-        </div>
-    </section>
+  <header>
+    <img src="health.png" alt="Health Icon" width="30" height="30">
+    <h1>Fitness App</h1>
+  </header>
 
-<section id="about" class="section-dark" role="region" aria-label="About Me">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a 22-year-old South Korean studying Information Technology and International Development (ITID) at Conestoga College. My passion lies in leveraging technology to address global development challenges and create positive change in the world.</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Workouts</a>
+    <a href="#">Nutrition</a>
+  </nav>
 
-        <p>With a strong foundation in IT and a deep understanding of international development issues, I am dedicated to making a meaningful impact on society. I have a keen interest in web development, programming, and database management, and I'm continuously expanding my skills to contribute to innovative solutions.</p>
-
-        <p>When I'm not coding or working on projects, I enjoy exploring new cultures, cuisines, and languages. I believe that embracing diversity and understanding different perspectives is essential for creating solutions that truly benefit all communities.</p>
+  <div id="dashboard">
+    <div class="widget">
+      <h2>User Profile</h2>
+      <p>Name: Sarah</p>
+      <p>Age: 28</p>
+      <p>Goal: Manage stress, maintain a healthy lifestyle <i class="icon-health"></i></p>
+      <button class="button">Edit Profile</button>
     </div>
-</section>
 
-<section id="projects" role="region" aria-label="Projects">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="project">
-            <div class="project-image">
-                <img src="https://images.pexels.com/photos/3949101/pexels-photo-3949101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="HTML Project">
-            </div>
-            <div class="project-info">
-                <h3>HTML Project</h3>
-                <p>This project showcases my HTML skills. It includes a responsive webpage built using HTML and CSS, demonstrating the use of semantic tags and responsive design principles.</p>
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-image">
-                <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Java Project">
-            </div>
-            <div class="project-info">
-                <h3>Java Project</h3>
-                <p>This Java project showcases my programming skills. It's a console-based application that demonstrates various Java concepts, including object-oriented programming and data structures.</p>
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-image">
-                <img src="https://images.pexels.com/photos/5588490/pexels-photo-5588490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="SQL Project">
-            </div>
-            <div class="project-info">
-                <h3>SQL Project</h3>
-                <p>This SQL project focuses on database management and querying. I designed and implemented a relational database system using SQL, created complex queries, and ensured data integrity.</p>
-            </div>
-        </div>
+    <div class="widget">
+      <h2>Workout Log</h2>
+      <ul>
+        <li>Monday: Jogging</li>
+        <li>Tuesday: Strength Training</li>
+        <li>Wednesday: Yoga</li>
+      </ul>
+      <button class="button">Add Workout</button>
     </div>
-</section>
 
-<section id="contact" class="section-dark" role="region" aria-label="Contact Me">
-    <div class="container">
-        <h2>Contact Me:</h2>
-        <p>Email: <a href="mailto:woosub.byun@gmail.com">woosub.byun@gmail.com</a></p>
-        <p>Phone: <a href="tel:226-507-9928">226-507-9928</a></p>
+    <div class="widget">
+      <h2>Nutrition</h2>
+      <p>Calories Consumed: 2000</p>
+      <p>Protein Intake: 80g</p>
+      <p>Carbs Intake: 250g</p>
+      <button class="button">Log Meal</button>
     </div>
-</section>
 
-<footer role="contentinfo">
-    <div class="container">
-        <p>&copy; 2023 woosub Byun</p>
+    <div class="widget card">
+      <h2>Special Offer</h2>
+      <p>Get 20% off on your next purchase! <i class="icon-new"></i></p>
+      <button class="button">Shop Now</button>
     </div>
-</footer>
+
+    <div class="widget">
+      <h2>Dropdown Example</h2>
+      <select>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </div>
+
+
+    <div class="widget">
+        <h2>Radio Group</h2>
+        <div class="radio-group">
+          <input type="radio" id="radio1" name="radio-group">
+          <label class="radio-label" for="radio1">Option 1</label>
+          <input type="radio" id="radio2" name="radio-group">
+          <label class="radio-label" for="radio2">Option 2</label>
+          <input type="radio" id="radio3" name="radio-group">
+          <label class="radio-label" for="radio3">Option 3</label>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>
+
